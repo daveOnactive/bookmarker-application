@@ -1,0 +1,59 @@
+ul {
+  color: #333333;
+  width: 95%;
+  background: #fff;
+  margin: 1rem auto 2rem auto;
+  padding: 1rem;
+  box-shadow: 0 0 8px 2px #ddd;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.name {
+  margin-right: 0.5rem;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.delete {
+  background: rgb(252, 20, 20);
+  color: #fff;
+  padding: 0.1rem 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit {
+  background: #007bff;
+  color: #fff;
+  padding: 0.1rem 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background: darken($color: #007bff, $amount: 1)
+  }
+}
+
+a {
+
+  button {
+    border: none;
+    background: rgb(255, 20, 20);
+    color: #fff;
+    padding: .3rem 1rem;
+    outline: none;
+    margin: 0 .5rem;
+    border-radius: 5px;
+    &:hover {
+      background: darken(rgb(225, 20, 20), 1);
+    }
+  }
+}

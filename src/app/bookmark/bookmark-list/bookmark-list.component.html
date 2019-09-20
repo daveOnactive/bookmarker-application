@@ -1,0 +1,22 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor='let bookmark of bookmarksArray'>
+      <div class="flex">
+        <div class="left">
+          <span class="name">{{bookmark.bookmarkName}}</span>
+          <span>&nbsp;</span>
+          <a href={{bookmark.bookmarkUrl}} target="_blank"><button>visit</button></a>
+        </div>
+
+        <div class="right">
+          <span class="edit" (click)='bookmarksEdit(bookmark.id)'>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </span>
+          &nbsp;
+          <span class="delete" (click)='deleteBookmark(bookmark.id)'>
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </span>
+        </div>
+
+      </div>
+    </li>
+  </ul>

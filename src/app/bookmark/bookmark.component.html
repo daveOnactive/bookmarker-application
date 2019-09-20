@@ -1,0 +1,47 @@
+
+<header>
+  <h1><span><i class="fa fa-bookmark" aria-hidden="true"></i></span>Bookmarker</h1>
+</header>
+<div [class]='notify()'>
+  <span *ngIf='flag'>{{displayMessage}}</span>
+  <span *ngIf='add'><i class="fa fa-check-circle-o" aria-hidden="true"></i></span>
+  <span *ngIf='remove'><i class="fa fa-warning" aria-hidden="true"></i></span>
+</div>
+<div class="container">
+  <div class="car">
+    <h4>Bookmark you favourite site</h4>
+    <hr>
+    <form #form='ngForm' (ngSubmit)="onSubmit(form)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input name="name" type="text" class="form-control" [(ngModel)]="bookmarks.bookmarkName" #nameField="ngModel" required>
+        <div [hidden]="!form.submitted || nameField.valid" class="alert alert-danger">
+          Enter bookmark name
+        </div>
+      </div>
+
+      <div class="form-group">
+          <label for="bookmark">Boomarkurl</label>
+          <input name="bookmark" type="url" class="form-control" [(ngModel)]= 'bookmarks.bookmarkUrl' #urlField="ngModel" required>
+          <div [hidden]="!form.submitted || urlField.valid" class="alert alert-danger">
+            Enter bookmark url
+          </div>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-primary" *ngIf='addBookmark'>Add Bookmark</button>
+      <div *ngIf='update'>
+        <button type="button" class="btn btn-outline-success" (click)='updateBookmark()'>Update Bookmark</button>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <button type="button" class="btn btn-outline-dark" (click)='cancelUpdate()'>Cancel</button>
+      </div>
+      </div>
+
+    </form>
+  </div>
+  <br>
+  <br>
+  <app-bookmark-list [bookmarksArray]="bookmarkArray" (editClick)='emmitBookmark($event)' (flag)='removedBookmarkNotify($event)'></app-bookmark-list>
+</div>
+

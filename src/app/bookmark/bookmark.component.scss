@@ -1,0 +1,67 @@
+.buttons {
+  text-align: center;
+}
+
+header {
+  background: #007bff;
+  padding: .2rem 0;
+  h1 {
+    color: #fff;
+    font-variant: small-caps;
+    text-align: center
+  }
+}
+
+form {
+  color: #333333;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.car {
+  width: 95%;
+  background: #fff;
+  margin: 3rem auto .5rem auto;
+  padding: 1rem;
+  box-shadow: 0 0 5px 2px #ddd;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.success {
+  position: fixed;
+  top: 11%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: rgba(25, 247, 25, 0.8);
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2rem .8rem;
+  width: 250px;
+  border-radius: 5px;
+  margin: 0.5rem auto;
+  box-shadow: 0 0 5px 1px #ddd;
+  span {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+.remove {
+  position: fixed;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: rgba(250, 34, 34, 0.8);
+  color: #fff;
+  font-weight: bold;
+  padding: 0.2rem 1rem;
+  width: 250px;
+  margin: 0.5rem auto;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px #ddd;
+  span {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+  }
+}
