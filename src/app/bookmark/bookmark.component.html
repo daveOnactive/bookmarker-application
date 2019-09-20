@@ -13,18 +13,18 @@
     <hr>
     <form #form='ngForm' (ngSubmit)="onSubmit(form)">
       <div class="form-group">
-        <label for="name">Name</label>
+        <label class='label' for="name">name</label>
         <input name="name" type="text" class="form-control" [(ngModel)]="bookmarks.bookmarkName" #nameField="ngModel" required>
         <div [hidden]="!form.submitted || nameField.valid" class="alert alert-danger">
-          Enter bookmark name
+          Enter name
         </div>
       </div>
 
       <div class="form-group">
-          <label for="bookmark">Boomarkurl</label>
+          <label class='label'  for="bookmark">url</label>
           <input name="bookmark" type="url" class="form-control" [(ngModel)]= 'bookmarks.bookmarkUrl' #urlField="ngModel" required>
           <div [hidden]="!form.submitted || urlField.valid" class="alert alert-danger">
-            Enter bookmark url
+            Enter url
           </div>
       </div>
       <div class="buttons">
